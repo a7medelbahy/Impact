@@ -1,0 +1,47 @@
+.action .action-video {
+  background-image: url("../../images/cta-bg.jpg");
+  background-size: cover;
+  position: relative;
+}
+.action .action-video::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.action .action-video .action-content {
+  position: relative;
+}
+.video-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--main-green-color);
+  transition: var(--main-transition);
+  z-index: 1;
+}
+.video-btn span i {
+  color: var(--secondary-white-color);
+  font-size: 24px;
+  line-height: 2;
+  transition: var(--main-transition);
+  transform: scale(1);
+}
+.video-btn:hover {
+  box-shadow: 0px 0px 5px 5px var(--main-green-color);
+}
+.video-btn:hover span i {
+  color: white;
+  animation: BtnVideo 1s linear infinite;
+}
+@keyframes BtnVideo {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}

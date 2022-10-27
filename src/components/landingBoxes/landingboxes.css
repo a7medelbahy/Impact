@@ -1,0 +1,28 @@
+.landing-boxes {
+  margin-top: -150px;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 991px) {
+  .landing-boxes {
+    margin-top: 50px;
+  }
+}
+.landing-boxes .land-box {
+  background-color: var(--main-green-color);
+  box-shadow: 0px 0px 5px var(--secondary-black-color);
+  border-radius: 15px;
+  height: 300px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.landing-boxes .land-box:hover {
+  background-color: var(--dark-green-color);
+}
+.landing-boxes .land-box p {
+  color: var(--secondary-white-color);
+  transition: var(--main-transition);
+}
+.landing-boxes .land-box:hover p {
+  color: white;
+}

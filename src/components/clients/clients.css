@@ -1,0 +1,10 @@
+.clients .swiper .swiper-button-next,
+.clients .swiper .swiper-button-prev,
+.clients .swiper .swiper-scrollbar,
+.clients .swiper .swiper-pagination.swiper-pagination-clickable {
+  display: none;
+}
+.clients .swiper .swiper-image {
+  max-width: 200px;
+  width: 200px;
+}

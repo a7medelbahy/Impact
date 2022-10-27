@@ -1,0 +1,65 @@
+.services {
+  background-color: var(--sections-background);
+}
+.services .service {
+  background-color: white;
+}
+.services .service .service-icon {
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+}
+.services .service .service-icon i {
+  transition: var(--main-transition);
+}
+.services .service:hover .service-icon i {
+  color: var(--main-green-color);
+}
+.services .service .service-info h4 {
+  position: relative;
+  width: fit-content;
+}
+@media (max-width: 767px) {
+  .services .service .service-info h4 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.services .service .service-info h4::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #ccc;
+  left: 0;
+  bottom: -10px;
+  transition: var(--main-transition);
+}
+.services .service:hover .service-info h4::after {
+  background-color: var(--main-green-color);
+}
+.services .service .service-info p {
+  color: var(--secondary-black-color);
+  font-weight: 500;
+}
+.services .service a {
+  color: var(--main-green-color);
+  transition: var(--main-transition);
+}
+.services .service:hover a {
+  color: var(--dark-green-color);
+}
+.services .service a i {
+  transition: var(--main-transition);
+}
+.services .service:hover a i {
+  animation: arrowLink 1s linear infinite;
+}
+@keyframes arrowLink {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}

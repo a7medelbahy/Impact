@@ -1,0 +1,28 @@
+.blogs {
+  background-color: var(--sections-background);
+}
+.blogs .blog {
+  box-shadow: 0px 0px 5px 2px #ccc;
+  transition: var(--main-transition);
+}
+.blogs .blog:hover .blog-img img {
+  transition: var(--main-transition);
+}
+.blogs .blog:hover .blog-img img {
+  transform: scale(1.05);
+}
+.blogs .blog .blog-info a {
+  color: var(--main-black-color);
+  font-weight: 600;
+  font-size: 20px;
+  transition: var(--main-transition);
+}
+.blogs .blog .blog-info a:hover {
+  color: var(--main-green-color);
+}
+.blogs .blog .author-info p {
+  font-weight: 500;
+}
+.blogs .blog .author-info small {
+  font-size: 14px;
+}

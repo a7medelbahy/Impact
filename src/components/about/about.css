@@ -1,0 +1,42 @@
+.about-us .right-about .about-list li i {
+  background-color: var(--main-green-color);
+  color: white;
+  border-radius: 50%;
+}
+.about-us .about-img img {
+  position: relative;
+}
+.about-us .about-img {
+  position: relative;
+}
+.about-us .about-img::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  top: 0;
+  transform-origin: center;
+  background-color: rgb(255 255 255 / 50%);
+  z-index: 1;
+  transition: var(--main-transition);
+  transform: scale(1);
+}
+.about-us .about-img:first-child:after {
+  left: 0;
+}
+.about-us .about-img:last-child:after {
+  right: 0;
+}
+.about-us .about-img:hover::after {
+  animation: aboutImg 0.5s 1 linear;
+}
+@keyframes aboutImg {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+    width: 100%;
+    opacity: 0;
+  }
+}

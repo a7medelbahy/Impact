@@ -1,0 +1,16 @@
+.questions .question-box {
+  box-shadow: 0px 0px 5px #ccc;
+}
+.questions .question-box .question-btn {
+  background-color: var(--main-green-color);
+  color: var(--secondary-white-color);
+  transition: var(--main-transition);
+}
+.questions .question-box .question-btn:hover {
+  color: white;
+}
+.questions .question-box .answer {
+  border-top: 1px solid var(--main-orange-color);
+  transition: var(--main-transition);
+  color: var(--secondary-black-color);
+}

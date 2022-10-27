@@ -1,0 +1,31 @@
+.footer {
+  background-color: var(--main-green-color);
+}
+.footer .footer-info h2 {
+  font-weight: 700;
+  font-size: 35px;
+}
+.footer .footer-info h2 span {
+  color: var(--main-orange-color);
+}
+.footer .footer-info .social-icons li {
+  width: 40px;
+  font-size: 18px;
+  height: 40px;
+  border: 1px solid var(--secondary-white-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.footer .footer-info .social-icons li:hover {
+  border-color: white;
+}
+.footer .newsletter .main-btn:hover {
+  background-color: white;
+  color: var(--main-green-color);
+}
+.footer .footer-end {
+  border-top: 1px solid var(--secondary-white-color);
+}

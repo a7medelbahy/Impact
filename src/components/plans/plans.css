@@ -1,0 +1,87 @@
+.plans {
+  background-color: var(--sections-background);
+}
+.plans .plan-box {
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px #ccc;
+  transition: var(--main-transition);
+}
+.plans .plan-box:hover {
+  transform: scale(1.02);
+}
+.plans .plan-box .plan-title {
+  background-color: #cccccc42;
+  color: var(--main-black-color);
+}
+.plans .plan-box .plan-price sup {
+  color: var(--main-orange-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+.plans .plan-box .plan-price h2 {
+  color: var(--main-green-color);
+  font-size: 40px;
+}
+.plans .plan-box .plan-price sub {
+  color: var(--secondary-black-color);
+  font-size: 14px;
+}
+.plan-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--main-green-color);
+  transition: var(--main-transition);
+}
+.plan-icon i {
+  color: var(--secondary-white-color);
+  font-size: 24px;
+  line-height: 2;
+  transition: var(--main-transition);
+  transform: scale(1);
+}
+.plan-box:hover .plan-icon {
+  box-shadow: 0px 0px 5px 5px var(--main-green-color);
+}
+.plan-box:hover .plan-icon i {
+  color: white;
+  animation: planIcon 1s linear infinite;
+}
+@keyframes planIcon {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+.plan-box .buy-btn {
+  background-color: white;
+  border-color: var(--main-green-color);
+  color: green;
+}
+.plan-box .buy-btn:hover {
+  color: white;
+}
+.plans .plan-box#id-2 {
+  transform: scale(1.05);
+}
+.plans .plan-box#id-2 .plan-title {
+  background-color: var(--main-green-color);
+  color: white;
+}
+.plans .plan-box#id-4 {
+  position: relative;
+}
+.plans .plan-box#id-4::after {
+  position: absolute;
+  content: "Advanced";
+  background-color: var(--main-green-color);
+  color: white;
+  padding: 0.25em 1em;
+  transform: rotate(45deg);
+  right: -20px;
+  font-size: 14px;
+  border-radius: 10px;
+  top: 15px;
+}
