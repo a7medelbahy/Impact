@@ -1,0 +1,22 @@
+.landing {
+  height: 100vh;
+  background-color: var(--main-green-color);
+}
+@media (max-width: 991px) {
+  .landing {
+    height: fit-content;
+    padding-bottom: 30px;
+  }
+}
+.landing .container .landing-content p {
+  color: var(--secondary-white-color);
+  font-weight: 500;
+  font-size: 18px;
+}
+.landing .container .landing-btns .watch-btn i {
+  color: var(--secondary-white-color);
+  transition: var(--main-transition);
+}
+.landing .container .landing-btns .watch-btn:hover i {
+  color: white;
+}

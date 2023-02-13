@@ -1,0 +1,37 @@
+.team-members {
+  background-color: var(--secondary-white-color);
+}
+.team-members .team-member {
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px #ccc;
+}
+.team-members .team-member img {
+  transition: var(--main-transition);
+}
+.team-members .team-member:hover img {
+  transform: scale(1.02);
+}
+.team-members .team-member .social-icons {
+  justify-content: center;
+}
+.team-members .team-member .social-icons li {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--secondary-black-color);
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
+.team-members .team-member .social-icons li a {
+  color: var(--secondary-black-color);
+  transition: var(--main-transition);
+  font-weight: 500;
+  font-size: 18px;
+}
+.team-members .team-member .social-icons li:hover,
+.team-members .team-member .social-icons li:hover a {
+  color: var(--main-green-color);
+  border-color: var(--main-green-color);
+}

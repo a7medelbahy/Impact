@@ -1,13 +1,191 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,500&display=swap");
+
+/* Global Styling */
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  background-color: var(--main-green-color);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--main-green-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-orange-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+#root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  width: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: var(--secondary-white-color);
+  transition: var(--main-transition);
+}
+a:hover {
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Variables */
+:root {
+  --dark-green-color: #00796b;
+  --main-green-color: #008374;
+  --main-orange-color: #f85a40;
+  --secondary-white-color: rgba(255, 255, 255, 0.6);
+  --main-black-color: #222222;
+  --secondary-black-color: #6f6f6f;
+  --section-padding: 80px;
+  --main-transition: all 0.5s;
+  --sections-background: rgb(246, 246, 246);
+}
+/* General Components */
+.section-padding {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.card {
+  padding: 1em;
+  border-radius: 15px;
+  background-color: white;
+  transition: var(--main-transition);
+}
+.secondary-btn,
+.main-btn {
+  padding: 0.75em 2em;
+  border-radius: 30px;
+  background-color: transparent;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+  border: 1px solid var(--secondary-white-color);
+  transition: var(--main-transition);
+}
+.main-btn:hover {
+  background-color: var(--main-green-color);
+}
+.main-btn:hover,
+.secondary-btn:hover {
+  box-shadow: 0px 0px 2px white;
+  border-color: white;
+}
+.section-head h2 {
+  font-weight: 700;
+  color: var(--main-black-color);
+  position: relative;
+}
+.section-head h2::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 80%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-green-color);
+}
+.section-head p {
+  color: var(--secondary-black-color);
+}
+.light-black {
+  color: var(--secondary-black-color);
+  font-weight: 500;
+  font-style: italic;
+}
+.video-container {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 200000;
+  background-color: rgba(0, 0, 0, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-video {
+  padding: 2em;
+  width: 75%;
+  height: 75%;
+  position: relative;
+  border-radius: 25px;
+  z-index: 300;
+}
+.video-box {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 100%;
+  border-radius: 25px;
+}
+.video-close {
+  padding: 0.5em 1em;
+  color: var(--main-orange-color);
+  background-color: var(--main-green-color);
+  border-radius: 7px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 10;
+}
+.up-btn {
+  padding: 0.5em 1em;
+  background-color: var(--main-orange-color);
+  border-radius: 10px;
+  font-size: 18px;
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: var(--main-transition);
+}
+@media (max-width: 767px) {
+  .up-btn {
+    right: 20%;
+  }
+}
+.up-btn i {
+  transition: var(--main-transition);
+}
+.up-btn:hover i {
+  animation: upBtn linear 1s infinite;
+  -webkit-animation: upBtn linear 1s infinite;
+}
+@keyframes upBtn {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-7px);
+  }
 }
